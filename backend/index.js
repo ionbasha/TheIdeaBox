@@ -1,4 +1,5 @@
 require('dotenv').config()
+const cors = require('cors')
 
 const { MongoClient } = require('mongodb')
 const express = require('express')
@@ -6,6 +7,7 @@ const express = require('express')
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.get('/submissions', async (req, res) => {
     const client = new MongoClient(process.env.MONGO_URI)
@@ -20,7 +22,7 @@ app.get('/submissions', async (req, res) => {
         res.status(200).json(submissionData)
     }
     catch(e) {
-        res.json({ error : e})
+        res.json({ error : e })
     }
     finally {
         await client.close()
