@@ -10,7 +10,9 @@ body {
   padding-top: 50px;
   padding-bottom: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 code {
@@ -28,7 +30,6 @@ code {
   border-style: solid;
   border-color: black;
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -41,11 +42,12 @@ h2 {
   border-radius: 20px;
   border-style: solid;
   background-color: white;
-  width: 55vh;
-  height: 50vh;
-  padding: 20px;
-  margin-left: 2vh;
-  margin-right: 2vh;
+  width: 50vh;
+  height: 40vh;
+  padding: 25px;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  margin-bottom: 15vh;
 }
 
 label {
@@ -53,8 +55,62 @@ label {
 }
 
 .cards {
-  margin-top: 10vh;
+  margin-top: 30vh;
   display: flex;
   flex-direction: row;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+}
+
+form {
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  width: 65vh;
+  margin: 20vh;
+  padding: 30px;
+  border-radius: 20px;
+  border: solid;
+  border-color: blue;
+  border-width: 5px;
+}
+
+input[type='text'] {
+  margin: 30px;
+  height: 10vh;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  text-align: left;
+}
+
+.formDiv {
+  text-align: center;
   justify-content: center;
+}
+
+.submitButton {
+  background-color: #35ca17;
+  width: 60vh;
+  height: 5vh;
+  color: white;
+  font-size: medium;
+  font-weight: bolder;
+  border: none;
+  border-radius: 30px;
+  margin-top: 5vh;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #44d427;
+}
+
+.radioButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="radio"] {
+  vertical-align: middle;
 }

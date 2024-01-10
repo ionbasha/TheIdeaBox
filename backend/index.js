@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.get('/submissions', async (req, res) => {
+app.get('/', async (req, res) => {
     const client = new MongoClient(process.env.MONGO_URI)
 
     try {
