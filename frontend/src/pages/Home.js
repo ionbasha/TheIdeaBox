@@ -3,6 +3,7 @@ import axios from 'axios'
 import SubmissionCard from '../components/SubmissionCard'
 import SubmissionForm from '../components/SubmissionForm'
 import { useNavigate } from 'react-router-dom'
+import lightbulb from '../media/lightbulb.png'
 
 const Home = () => {
 
@@ -32,6 +33,7 @@ const Home = () => {
     <div className='displayedContent'>
       <div className='topPage'>
         <h2>TheIdeaBox</h2>
+        <img src={lightbulb} alt="Failed to load" className='center'/>
         <p>Put your coding project ideas here!</p>
       </div>
       <button className='submitButton' onClick={goToForm}>Submit your project ideas here!</button>

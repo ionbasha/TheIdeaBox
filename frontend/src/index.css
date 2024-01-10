@@ -31,6 +31,7 @@ code {
   border-color: black;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 h2 {
@@ -113,4 +114,15 @@ button:hover {
 
 input[type="radio"] {
   vertical-align: middle;
+}
+
+img {
+  width: 250px;
+  height: 150px
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
