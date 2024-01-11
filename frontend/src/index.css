@@ -21,7 +21,7 @@ code {
 }
 
 .topPage {
-  height: 50vh;
+  height: 60vh;
   width: 100vh;
   background-color: white;
   text-align: center;
@@ -29,10 +29,9 @@ code {
   border: 3px;
   border-style: solid;
   border-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h2 {
@@ -54,6 +53,9 @@ h2 {
 
 label {
   font-weight: bolder;
+  display: flex;
+  margin-bottom: 10px;
+  
 }
 
 .cards {
@@ -111,19 +113,35 @@ button:hover {
 .radioButtons {
   display: flex;
   flex-direction: column;
+  margin: 40px;
 }
 
-input[type="radio"] {
-  vertical-align: middle;
+.buttonLabelPair {
+  display: flex;
+  flex-direction: row;
+  padding-top: 35px;
 }
 
 img {
   width: 250px;
-  height: 150px
+  height: 150px;
+  margin: 6vh;
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.buttonDiv {
+  margin: 6vh;
+  display: flex;
+  justify-content: center;
+}
+
+input[type='radio'] {
+  margin-left: 10vh;
+  width: 20px;
+  height: 20px;
 }

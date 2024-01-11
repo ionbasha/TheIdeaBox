@@ -36,7 +36,9 @@ const Home = () => {
         <img src={lightbulb} alt="Failed to load" className='center'/>
         <p>Put your coding project ideas here!</p>
       </div>
-      <button className='submitButton' onClick={goToForm}>Submit your project ideas here!</button>
+      <div className='buttonDiv'>
+        <button className='submitButton' onClick={goToForm}>Submit your project ideas here!</button>
+      </div>
       <div className='cards'>
         {submissions && submissions.map((singleSubmit) => (
             <SubmissionCard submission = {singleSubmit} />

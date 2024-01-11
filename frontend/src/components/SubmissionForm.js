@@ -80,30 +80,36 @@ const SubmissionForm = () => {
           </input>
           <label>Difficulty</label>
           <div className='radioButtons'>
-              <label>Beginner</label>
-              <input 
-                name='difficulty' 
-                type={'radio'} 
-                value = 'Beginner' 
-                onChange={handleChange} 
-                checked={submitData.difficulty === 'Beginner'}>
-              </input>
-              <label>Intermediate</label>
-              <input 
-                name='difficulty' 
-                type={'radio'} 
-                value = 'Intermediate' 
-                onChange={handleChange} 
-                checked={submitData.difficulty === 'Intermediate'}>
-              </input>
-              <label>Expert</label>
-              <input 
-                name='difficulty' 
-                type={'radio'} 
-                value = 'Expert' 
-                onChange={handleChange} 
-                checked={submitData.difficulty === 'Expert'}>
-              </input>
+              <div className='buttonLabelPair'>
+                <label>Beginner</label>
+                <input 
+                  name='difficulty' 
+                  type={'radio'} 
+                  value = 'Beginner' 
+                  onChange={handleChange} 
+                  checked={submitData.difficulty === 'Beginner'}>
+                </input>
+              </div>
+              <div className='buttonLabelPair'>
+                <label>Intermediate</label>
+                <input 
+                  name='difficulty' 
+                  type={'radio'} 
+                  value = 'Intermediate' 
+                  onChange={handleChange} 
+                  checked={submitData.difficulty === 'Intermediate'}>
+                </input>
+              </div>
+              <div className='buttonLabelPair'>
+                <label>Expert</label>
+                <input 
+                  name='difficulty' 
+                  type={'radio'} 
+                  value = 'Expert' 
+                  onChange={handleChange} 
+                  checked={submitData.difficulty === 'Expert'}>
+                </input>
+              </div>
           </div>
           <label>Programming Language(s) / framework suggestions</label>
           <input 
@@ -113,7 +119,9 @@ const SubmissionForm = () => {
             value={submitData.techSuggests}
             onChange={handleChange}>
           </input>
+          <div className='buttonDiv'>
           <button onClick={handleSubmit} className='submitButton'>Submit</button>
+          </div>
         </form>
       </div>
     )
