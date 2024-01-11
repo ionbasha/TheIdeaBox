@@ -18,4 +18,4 @@ are displayed in descending order of the number of likes. This app is a WIP, so 
 
 This app was build using the MERN (MongoDB, Express.js, React.js, Node.js) stack. The frontend was made using the React.js
 framework. The backend/API layer was developed using Node.js and the Express.js library. To store submission data, the
-database program MongoDB is used (hosted on Atlas.)
+database program MongoDB is used (hosted on Atlas.) The entire app is written using JavaScript.
