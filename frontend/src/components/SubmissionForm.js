@@ -15,7 +15,8 @@ const SubmissionForm = () => {
     title: '',
     desc: '',
     difficulty: '',
-    techSuggests: ''
+    techSuggests: '',
+    likes: 0
   })
 
   const handleChange = e => {
@@ -36,13 +37,15 @@ const SubmissionForm = () => {
       const desc = submitData.desc
       const difficulty = submitData.difficulty
       const techSuggests = submitData.techSuggests
+      const likes = submitData.likes
 
       try {
         const res = await axios.post('http://localhost:8000/', {
         title,
         desc,
         difficulty,
-        techSuggests
+        techSuggests,
+        likes
       })
       
       if(res.status === 201) {

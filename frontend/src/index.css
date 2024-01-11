@@ -32,6 +32,8 @@ code {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 h2 {
@@ -39,6 +41,7 @@ h2 {
 }
 
 .subCard {
+  position: relative;
   overflow: auto;
   border-radius: 20px;
   border-style: solid;
@@ -154,6 +157,7 @@ input[type='radio'] {
   justify-content: center;
   padding-top: 26px;
   margin-left: 45vh;
+  z-index: 1;
 }
 
 .buttonLike {
@@ -184,4 +188,15 @@ input[type='radio'] {
 
 .subCard label {
   padding: 0;
+}
+
+label {
+  font-weight: bolder;
+}
+
+.cardDetails {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  margin: 20px;
 }

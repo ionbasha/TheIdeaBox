@@ -1,7 +1,7 @@
 require('dotenv').config()
 const cors = require('cors')
 
-const { MongoClient } = require('mongodb')
+const { MongoClient, ObjectId } = require('mongodb')
 const express = require('express')
 
 const app = express()
@@ -19,7 +19,7 @@ app.get('/', async (req, res) => {
         const database = client.db('ideaboxdb')
         const submissionCollection = database.collection('submissions')
 
-        const submissionData = await submissionCollection.find({}).toArray()
+        const submissionData = await submissionCollection.find({}).sort({ likes: -1 }).toArray()
         
         res.status(200).json(submissionData)
     }
@@ -34,7 +34,7 @@ app.get('/', async (req, res) => {
 
 // POST new submission
 app.post('/', async (req, res) => {
-    const { title, desc, difficulty, techSuggests } = req.body
+    const { title, desc, difficulty, techSuggests, likes } = req.body
     const client = new MongoClient(process.env.MONGO_URI)
 
     try {
@@ -46,7 +46,8 @@ app.post('/', async (req, res) => {
             title: title,
             desc: desc,
             difficulty: difficulty,
-            techSuggests: techSuggests
+            techSuggests: techSuggests,
+            likes: likes
         }
 
         await submissionCollection.insertOne(submissionData)
@@ -58,6 +59,33 @@ app.post('/', async (req, res) => {
     finally {
         await client.close()
         console.log("Closing MongoDB client...")
+    }
+})
+
+app.patch('/:id', async (req, res) => {
+    const { id } = req.params
+    console.log(id)
+    const client = new MongoClient(process.env.MONGO_URI)
+
+    try {
+        const database = client.db('ideaboxdb')
+        const submissionCollection = database.collection('submissions')
+
+        const response = await submissionCollection.findOneAndUpdate(
+            {_id: new ObjectId(id)}, 
+            { $inc: { likes: 1 } },
+            { returnDocument: 'after' }
+        )
+
+        console.log(response)
+
+        res.status(200).json("Success")
+
+    } catch(e) {
+        console.log(e)
+    } finally {
+        await client.close()
+        console.log("Closing PATCH...")
     }
 })
 

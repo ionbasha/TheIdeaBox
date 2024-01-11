@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import SubmissionCard from '../components/SubmissionCard'
-import SubmissionForm from '../components/SubmissionForm'
 import { useNavigate } from 'react-router-dom'
 import lightbulb from '../media/lightbulb.png'
 
