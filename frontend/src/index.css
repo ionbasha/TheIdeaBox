@@ -51,7 +51,7 @@ h2 {
   margin-bottom: 15vh;
 }
 
-label {
+form label {
   font-weight: bolder;
   display: flex;
   margin-bottom: 10px;
@@ -144,4 +144,42 @@ input[type='radio'] {
   margin-left: 10vh;
   width: 20px;
   height: 20px;
+}
+
+.buttonBar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+}
+
+.buttonLike {
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  background-image: url('./media/thumbsup.png');
+  background-size: cover;
+  border: none;
+  width: 30px;
+  height: 30px;
+  margin-left: 45vh;
+}
+
+.buttonLike:hover {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  transition: width 0.2s ease, height 0.2s ease
+
+}
+
+.buttonLike:active {
+  width: 30px;
+  height: 30px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+
+.subCard label {
+  padding: 0;
 }
