@@ -34,7 +34,7 @@ const Home = () => {
       <div className='topPage'>
         <h2>TheIdeaBox</h2>
         <img src={lightbulb} alt="Failed to load" className='center'/>
-        <p>Put your coding project ideas here!</p>
+        <p style={{marginTop: 90}}>Put your coding project ideas here!</p>
       </div>
       <div className='buttonDiv'>
         <button className='submitButton' onClick={goToForm}>Submit your project ideas here!</button>

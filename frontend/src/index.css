@@ -150,7 +150,10 @@ input[type='radio'] {
   position: relative;
   display: flex;
   flex-direction: row;
-  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  padding-top: 26px;
+  margin-left: 45vh;
 }
 
 .buttonLike {
@@ -162,7 +165,6 @@ input[type='radio'] {
   border: none;
   width: 30px;
   height: 30px;
-  margin-left: 45vh;
 }
 
 .buttonLike:hover {

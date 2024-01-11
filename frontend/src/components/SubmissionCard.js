@@ -13,7 +13,7 @@ const SubmissionCard = ({ submission }) => {
     <div className='subCard'>
       <div className='buttonBar'>
         <button className='buttonLike' onClick={handleClick}></button>
-        <label>{likes}</label>
+        <p>{likes}</p>
       </div>
       <label>Project Title:</label>
       <p>{submission.title}</p>
