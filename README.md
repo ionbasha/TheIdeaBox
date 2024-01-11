@@ -1,4 +1,4 @@
-## TheIdeaBox
+# TheIdeaBox
 
 This app is meant as an online repository where users can post submissions regarding project idea suggestions.
 
@@ -14,7 +14,7 @@ appropriate for the given project.
 The web app includes a 'like' system, which allows users to like any posts which they believe to be interesting. Posts
 are displayed in descending order of the number of likes. This app is a WIP, so please DO NOT OVERUSE THE LIKE BUTTON.
 
-# Implementation
+## Implementation
 
 This app was build using the MERN (MongoDB, Express.js, React.js, Node.js) stack. The frontend was made using the React.js
 framework. The backend/API layer was developed using Node.js and the Express.js library. To store submission data, the
